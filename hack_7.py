@@ -7,7 +7,7 @@ generic script
 text: ["a","b","c","d","e"] output => ["1",2,"3",4,"5"]
 text: [0] output => [0] 
 """
-
+#WHILE
 
 def fn_hack_7(s):
     result = s
@@ -17,11 +17,13 @@ def fn_hack_7(s):
            "d": 4,
            "e": "5"}
     _ls = []
-    for n in range(0,len(result)):
+    n = 0
+    while (n < len(result)):
         if result[n] in dic:
             _ls.append(dic[result[n]]) #se aplica el diccionario
         else:
             _ls.append(result[n])  #se deja el mismo valor (caso 0)
+        n += 1
     result = _ls
 
     return result
